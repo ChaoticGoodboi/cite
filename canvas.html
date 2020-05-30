@@ -18,9 +18,21 @@
         <li><a href="about.html"> about </a></li>
         <li><a href="slider.html"> slider </a></li>
         <li><a href="contact.html"> contact</a></li>
-    </ul>
+    </ul><canvas id="draw" width="490" height="440"></canvas>
+    <table>
+        <tr>
+            <td ></td>
+            <td>
+                <div>
+                    <input type="range" min="0" max="255" value="0" style="background-color:red;" id="red" />R<br>
+                    <input type="range" min="0" max="255" value="0" style="background-color:green;" id="green"/>G<br>
+                    <input type="range" min="0" max="255" value="0" style="background-color:blue;" id="blue"/>B<br>
+                 </div>
+             </td>
+        </tr>
+    </table>
     <div>
-        <canvas id="draw" width="490" height="220"></canvas>
+        
     </div>
     <div id="tools">
         <button id="clear" onclick="Clear()">Clear</button>
