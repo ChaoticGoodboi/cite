@@ -1,0 +1,163 @@
+﻿
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3 Column Layout</title>
+    <link rel="stylesheet" href="assets/css/layout.css">
+
+    <style type="text/css">
+        TABLE {
+            width: 500px; /* Ширина таблицы */
+            border-collapse: collapse; /* Убираем двойные линии между ячейками */
+        }
+
+        .main {
+            width: 500px; /* Ширина таблицы */
+            border-collapse: collapse; /* Убираем двойные линии между ячейками */
+        }
+
+        .inner {
+            width: 100%;
+            border: hidden;
+        }
+
+        TD, TH {
+            padding: 2px; /* Поля вокруг содержимого таблицы */
+            border: 1px solid yellow; /* Параметры рамки */
+        }
+
+        .tableinside {
+            padding: 0px; /* Поля вокруг содержимого таблицы */
+            border: 1px solid yellow;
+        }
+
+        TH {
+            background: #b0e0e6; /* Цвет фона */
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+    <ul class="header">
+        <li><a href="index.html">index</a></li>
+        <li><a href="media.html"> media </a></li>
+        <li><a href="about.html"> about </a></li>
+        <li><a href="slider.html"> slider </a></li>
+        <li><a href="contact.html"> contact</a></li>
+    </ul>
+    <div class="container">
+        <table class="main">
+            <!-- row 1 - names -->
+            <thead><tr> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> </tr></thead>
+            <tbody>
+                <tr>
+                    <td rowspan="11">1</td>
+                    <td colspan="3" class="tableinside">
+                        <table class="inner">
+                            <tbody>
+                            <tr>
+                                <td class="tableinside">
+                                    <table class="inner">
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td class="tableinside">
+                                                    <table class="inner">
+                                                        <tr rowspan="3"><td>1</td></tr>
+                                                        <tr rowspan="2"><td>2</td></tr>
+                                                    </table>
+                                                </td>
+                                                <td class="tableinside">
+                                                    <table class="inner">
+                                                        <tr><td>0</td></tr>
+                                                        <tr><td>0</td></tr>
+                                                        <tr><td>0</td></tr>
+                                                        <tr><td>0</td></tr>
+                                                        <tr><td>0</td></tr>
+                                                    </table>
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="tableinside">
+                                <td>
+                                    <table class="inner">
+                                        <tr>
+                                            <td>0</td>
+                                            <td class="tableinside">
+                                                <table class="inner">
+                                                    <tr rowspan="3"><td>1</td></tr>
+                                                    <tr rowspan="2"><td>2</td></tr>
+                                                </table>
+                                            </td>
+                                            <td class="tableinside">
+                                                <table class="inner">
+                                                    <tr><td>0</td></tr>
+                                                    <tr><td>0</td></tr>
+                                                    <tr><td>0</td></tr>
+                                                    <tr><td>0</td></tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">3</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td rowspan="11" class="tableinside">
+                        <table class="inner">
+                            <tr><td>1</td></tr>
+                            <tr><td>2</td></tr>
+                            <tr><td>3</td></tr>
+                            <tr><td>4</td></tr>
+                            <tr><td>5</td></tr>
+                            <tr><td>6</td></tr>
+                            <tr><td>7</td></tr>
+                            <tr><td>8</td></tr>
+                            <tr><td>9</td></tr>
+                            <tr><td>10</td></tr>
+                            <tr><td>11</td></tr>
+                        </table>
+                    </td>
+                    <td rowspan="11" class="tableinside">
+                        <table class="inner">
+                            <tr><td>10</td></tr>
+                            <tr><td>15</td></tr>
+                            <tr><td>6</td></tr>
+                            <tr><td>10</td></tr>
+                            <tr><td>15</td></tr>
+                            <tr><td>15</td></tr>
+                            <tr><td>10</td></tr>
+                            <tr><td>15</td></tr>
+                            <tr><td>6</td></tr>
+                            <tr><td>10</td></tr>
+                            <tr><td>15</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+</html>
