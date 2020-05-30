@@ -24,9 +24,8 @@ let log = document.getElementById('log');
 
 canvas.addEventListener("mousedown", function (e) {
     //log.innerHTML = "you CLICKEd, bastard!"; //работает
-    mouseX = e.pageX - this.offsetLeft - offsetLeft;
-
-    mouseY = e.pageY - this.offsetHeight - offsetHeight;
+    mouseX = e.pageX - this.offsetLeft /*- offsetLeft*/;
+    mouseY = e.pageY - this.offsetTop /*- offsetTop*/;
 
     log.innerHTML = "you CLICKEd, bastard!"; //не работает
     paint = true;
@@ -39,23 +38,23 @@ canvas.addEventListener("mousedown", function (e) {
 canvas.addEventListener("mousemove", function (e) {
     
     if (paint) {
-        //log.innerHTML = "You moved!";
-        addClick(e.pageX - this.offsetLeft - offsetLeft, e.pageY - this.offsetTop - offsetTop);
+        log.innerHTML = "You moved!";
+        addClick(e.pageX - this.offsetLeft /*- offsetLeft*/, e.pageY - this.offsetTop /*- offsetTop*/);
         redraw();}
 });
 
 
 function addClick(x, y, dragging) {
-    log.innerHTML = "AddClick worked";
+    //log.innerHTML = "AddClick worked";
     clickX.push(x);
     clickY.push(y);
     clickDrag.push(dragging);
 }
 
 function redraw() {
-    log.innerHTML = "Redrew";
-    context.ClearRect(0, 0, context.canvas.width, context.canvas.height);
     
+    //context.ClearRect(0, 0, canvas.width, canvas.height);
+    log.innerHTML = "Redrew";
 
     context.strokeStyle = "blue";
     context.lineJoin = "round";
